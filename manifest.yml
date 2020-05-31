@@ -5,3 +5,9 @@ applications:
   instances: 1
   url: bootstrap.${target-base}
   path: .
+
+development:
+    adapter: sqlite3
+    database: barbershop2.db
+    pool: 5
+    timeout: 5000

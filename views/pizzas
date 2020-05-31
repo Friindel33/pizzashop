@@ -1,0 +1,12 @@
+<body>
+  <h2>Our Pizzas</h2>
+  <div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-3"><a href="/images/chicken_hawaii.jpg" title="Chicken Hawaii Pizza"><img src="/images/chicken_hawaii.jpg"</a></div>
+    <div class="col-md-3"><a href="/images/italiano_original.jpg" title="Original Italian Pizza"><img src="/images/italiano_original.jpg"></a></div>
+    <div class="col-md-3"><a href="/images/pepperoni.jpg" title="Pepperoni Pizza"><img src="/images/pepperoni.jpg"</a></div>
+    <div class="col-md-3"><a href="/images/primo_meat.jpg" title="Primo Meat Pizza"><img src="/images/primo_meat.jpg"</a></div>
+    <div class="col-md-3"><a href="/images/trio_cheese.jpg" title="The Cheesiest Pizza"><img src="/images/trio_cheese.jpg"></a></div>
+    <div class="col-md-3"><a href="/images/vegge_lover.jpg" title="Pizza for Vegetarians"><img src="/images/vegge_lover.jpg"</a></div>
+  </div>
+</body>

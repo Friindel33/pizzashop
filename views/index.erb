@@ -6,6 +6,25 @@
   </head>
   <body>
     <h2>Welcome to Pizza Shop!</h2>
+    <br />
+      <div class="row">
+        <% @products.each do |p| %>
+          <div class="col-md-4">
+            <div><b><%= p.title %></b></div>
+            <div><img src="<%= p.path_to_image %>"></div>
+            <div><i><%= p.description %></i></div>
+            <br />
+            <div>Price: <%= p.price %> £</div>
+            <div>Size: <%= p.size %> in</div>
+            <div>
+              <button class="btn btn-xs btn-success" onclick="add_to_card(<%= p.id %>)">Add to card</button>
+            </div>
+            <br />
+          </div>
+        <% end %>
+      </div>
+      <br />
+      <br />
     <button class="btn btn-primary" onclick="something()">click me</button>
   </body>
 </html>
