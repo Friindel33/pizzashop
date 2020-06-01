@@ -19,5 +19,10 @@ get '/about' do
 end
 
 post '/cart' do
-	erb
+	erb 'Hello'
+end
+
+get '/pizzas/:name' do
+	@products = Product.all
+	erb :pizzas
 end

@@ -14,6 +14,7 @@ ActiveRecord::Schema.define(version: 2020_05_29_141509) do
 
   create_table "products", force: :cascade do |t|
     t.string "title"
+    t.string "name"
     t.text "description"
     t.decimal "price"
     t.decimal "size"
@@ -22,6 +23,7 @@ ActiveRecord::Schema.define(version: 2020_05_29_141509) do
     t.boolean "is_best_offer"
     t.string "path_to_image"
     t.string "path_to_big_image"
+    t.string "path_to_page"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

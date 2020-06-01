@@ -5,13 +5,12 @@
     <title></title>
   </head>
   <body>
-    <h2>Welcome to Pizza Shop!</h2>
     <br />
       <div class="row">
         <% @products.each do |p| %>
-          <div class="col-md-4">
+          <div class="col-md-12">
             <div><b><%= p.title %></b></div>
-            <div><img src="<%= p.path_to_image %>"></div>
+            <div><img src="<%= p.path_to_big_image %>"></div>
             <div><i><%= p.description %></i></div>
             <br />
             <div>Price: <%= p.price %> £</div>
@@ -34,6 +33,6 @@
         update_orders_button();
       })
     </script>
-    
+
   </body>
 </html>

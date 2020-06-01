@@ -5,11 +5,11 @@
     <title></title>
   </head>
   <body>
-    <h2>Welcome to Pizza Shop!</h2>
+    <h2>Pizza Pepperoni</h2>
     <br />
       <div class="row">
         <% @products.each do |p| %>
-          <div class="col-md-4">
+          <div class="col-md-2">
             <div><b><%= p.title %></b></div>
             <div><img src="<%= p.path_to_image %>"></div>
             <div><i><%= p.description %></i></div>
@@ -34,6 +34,6 @@
         update_orders_button();
       })
     </script>
-    
+
   </body>
 </html>
