@@ -22,7 +22,8 @@ post '/cart' do
 	erb 'Hello'
 end
 
-get '/pizzas/:name' do
+get '/pizzas/:id' do
+	@product = Product.find(params[:id])
 	@products = Product.all
 	erb :pizzas
 end

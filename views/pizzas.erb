@@ -2,29 +2,28 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="/images.css">
     <title></title>
   </head>
   <body>
     <br />
       <div class="row">
-        <% @products.each do |p| %>
-          <div class="col-md-12">
-            <div><b><%= p.title %></b></div>
-            <div><img src="<%= p.path_to_big_image %>"></div>
-            <div><i><%= p.description %></i></div>
+          <div class="col-md-6">
             <br />
-            <div>Price: <%= p.price %> £</div>
-            <div>Size: <%= p.size %> in</div>
-            <div>
-              <button class="btn btn-xs btn-success" onclick="add_to_card(<%= p.id %>)">Add to card</button>
-            </div>
-            <br />
+            <div class="img-hover-zoom"><img src="<%= @product.path_to_big_image %>"alt=""></div>
           </div>
-        <% end %>
+            <br />
+            <div class="col-md-6">
+              <div><b><%= @product.title %></b></div>
+              <div><i><%= @product.description %></i></div>
+              <br />
+              <div>Price: <%= @product.price %> £</div>
+              <div>Size: <%= @product.size %> in</div>
+              <div><button class="btn btn-xs btn-success" onclick="add_to_card(<%= @product.id %>)">Add to card</button></div>
+            </div>
       </div>
       <br />
       <br />
-    <button class="btn btn-primary" onclick="something()">click me</button>
 
     <script type="text/javascript">
 
