@@ -11,7 +11,7 @@
         <% @products.each do |p| %>
           <div class="col-md-4">
             <div><b><%= p.title %></b></div>
-            <div><img src="<%= p.path_to_image %>"></div>
+            <div><a href="<%= p.path_to_page %>"><img src="<%= p.path_to_image %>"></a></div>
             <div><i><%= p.description %></i></div>
             <br />
             <div>Price: <%= p.price %> £</div>
@@ -34,6 +34,6 @@
         update_orders_button();
       })
     </script>
-    
+
   </body>
 </html>
