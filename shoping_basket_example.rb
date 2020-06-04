@@ -13,13 +13,13 @@ loop do
 
   puts hh.inspect
 
-  #calculates total number of items in the cart
+  #calculates total number of items in the basket
   total = 0
   hh.each do |key, value|
     total = total + value
   end
 
   #puts total variable
-  puts "total items in cart: #{total}"
+  puts "total items in basket: #{total}"
 
 end

@@ -9,7 +9,7 @@ function something()
       alert(x);
   }
 
-function add_to_card(id)
+function add_to_basket(id)
 {
   var key = 'product_' + id; //extract variable
 
@@ -23,17 +23,17 @@ function add_to_card(id)
 
 function update_orders_input()
 {
-  var orders = cart_get_orders();
+  var orders = basket_get_orders();
   $('#orders_input').val(orders);
 }
 
 function update_orders_button()
 {
-  var text = 'Cart (' + cart_get_number_of_items() + ')';
+  var text = 'basket (' + basket_get_number_of_items() + ')';
   $('#orders_button').val(text);
 }
 
-function cart_get_number_of_items()
+function basket_get_number_of_items()
 {
   var cnt = 0;
 
@@ -50,7 +50,7 @@ function cart_get_number_of_items()
   return cnt;
 }
 
-function cart_get_orders()
+function basket_get_orders()
 {
   var orders = '';
 
@@ -65,4 +65,16 @@ function cart_get_orders()
     }
   }
   return orders;
+}
+
+function cancel_order()
+{
+  window.localStorage.clear();
+
+    update_orders_input();
+    update_orders_button();
+
+  $('#basket').text('Your basket is now empty');
+
+  return false;
 }
