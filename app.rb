@@ -41,7 +41,7 @@ get '/about' do
 end
 
 post '/basket' do
-  @orders_input = params[:orders_input]
+  @orders_input = params[:orderstring]
   @items = parse_orders_input @orders_input
 
   # выводим сообщение о том, что корзина пуста
@@ -55,6 +55,18 @@ post '/basket' do
   end
 
 	erb :basket
+end
+
+post '/place_order' do
+
+  @order = Order.new params[:order]
+
+	if @order.save
+		erb :order_placed
+	else
+		@error = @order.errors.full_messages.first
+		erb :basket
+	end
 end
 
 def parse_orders_input orders_input
@@ -76,18 +88,6 @@ def parse_orders_input orders_input
   end
 
   return arr
-end
-
-post '/place_order' do
-
-  @order = Order.new params[:order]
-
-	if @order.save
-		erb :order_placed
-	else
-		@error = @order.errors.full_messages.first
-		erb :basket
-	end
 end
 
 get '/pizzas/:id' do
