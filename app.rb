@@ -109,3 +109,21 @@ post '/contacts' do
 		erb :contacts
 	end
 end
+
+get '/admin' do
+  erb :admin
+end
+
+post '/admin' do
+	@login = params[:login]
+	@password = params[:password]
+	@delete = params[:delete]
+
+	if @login == 'admin' && @password == 'admin'
+		@file = Order.all
+		erb :view_orders
+	else
+		@error = '<p>Wrong Login or Password</p>'
+		erb :admin
+	end
+end

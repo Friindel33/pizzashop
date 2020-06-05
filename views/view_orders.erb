@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <h1>Admin Panel.    <b>Orders</b></h1>
+    <title></title>
+  </head>
+  <body>
+    <table class="table table-sm table-striped">
+      <thead>
+        <tr>
+          <th style="width: 5%">#</th>
+          <th style="width: 10%">Name</th>
+          <th style="width: 15%">Phone</th>
+          <th style="width: 15%">Address</th>
+          <th style="width: 40%">Order</th>
+          <th style="width: 15%">Time of order</th>
+        </tr>
+      </thead>
+    <% @file.each do |line| %>
+      <tr>
+        <td style="width: 5%"><%= line.id %></td>
+        <td style="width: 10%"><%= line.name %></td>
+        <td style="width: 15%"><%= line.phone %></td>
+        <td style="width: 15%"><%= line.address %></td>
+        <td style="width: 40%"><%= line.orders_input %></td>
+        <td style="width: 15%"><%= line.updated_at %></td>
+      </tr>
+      <% end %>
+    </table>
+    <br>
+    <br>
+  </body>
+</html>
