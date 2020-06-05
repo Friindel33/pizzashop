@@ -6,31 +6,40 @@
     <title></title>
   </head>
   <body>
-    <br />
-      <div class="row">
-          <div class="col-md-6">
-            <div class="image-box">
-              <img src="<%= @product.path_to_big_image %>" alt="" width="600" height="600" />
-            </div>
-            </div>
-            <!-- <div class="img-hover-zoom"><img src=""alt=""></div>
-          </div> -->
-            <br />
-            <div class="col-md-6">
-              <div><b><%= @product.title %></b></div>
-              <div><i><%= @product.description %></i></div>
-              <br />
-              <div>Price: <%= @product.price %> £</div>
-              <div>Size: <%= @product.size %> in</div>
-              <div><button class="btn btn-xs btn-success" onclick="add_to_basket(<%= @product.id %>)">Add to basket</button></div>
-            </div>
+    <br/>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="image-box">
+          <img src="<%= @product.path_to_big_image %>" alt="" width="600" height="600"/>
+        </div>
       </div>
-      <br />
-      <br />
+      <!-- <div class="img-hover-zoom"><img src=""alt=""></div> </div> -->
+      <br/>
+      <div class="col-md-6">
+        <div>
+          <b><%= @product.title %></b>
+        </div>
+        <div>
+          <i><%= @product.description %></i>
+        </div>
+        <br/>
+        <div>Price:
+          <%= @product.price %>
+          £</div>
+        <div>Size:
+          <%= @product.size %>
+          in</div>
+        <div>
+          <button class="btn btn-xs btn-success" onclick="add_to_basket(<%= @product.id %>)">Add to basket</button>
+        </div>
+      </div>
+    </div>
+    <br/>
+    <br/>
 
     <script type="text/javascript">
 
-      $(function(){
+      $(function () {
         update_orders_input();
         update_orders_button();
       })

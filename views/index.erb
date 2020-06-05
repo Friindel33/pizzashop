@@ -6,24 +6,34 @@
   </head>
   <body>
     <h2>Welcome to Pizza Shop!</h2>
-    <br />
-      <div class="row">
-        <% @products.each do |p| %>
-          <div class="col-md-4">
-            <div><b><%= p.title %></b></div>
-            <div><a href="<%= p.path_to_page %>"><img src="<%= p.path_to_image %>"></a></div>
-            <div><i><%= p.description %></i></div>
-            <br />
-            <div>Price: <%= p.price %> £</div>
-            <div>Size: <%= p.size %> in</div>
-            <div>
-              <button class="btn btn-xs btn-success" onclick="add_to_basket(<%= p.id %>)">Add to basket</button>
-            </div>
-            <br />
+    <br/>
+    <div class="row">
+      <% @products.each do |p| %>
+        <div class="col-md-4">
+          <div>
+            <b><%= p.title %></b>
           </div>
-        <% end %>
-      </div>
-      <br />
-      <br />
+          <div>
+            <a href="<%= p.path_to_page %>"><img src="<%= p.path_to_image %>"></a>
+          </div>
+          <div>
+            <i><%= p.description %></i>
+          </div>
+          <br/>
+          <div>Price:
+            <%= p.price %>
+            £</div>
+          <div>Size:
+            <%= p.size %>
+            in</div>
+          <div>
+            <button class="btn btn-xs btn-success" onclick="add_to_basket(<%= p.id %>)">Add to basket</button>
+          </div>
+          <br/>
+        </div>
+      <% end %>
+    </div>
+    <br/>
+    <br/>
   </body>
 </html>
